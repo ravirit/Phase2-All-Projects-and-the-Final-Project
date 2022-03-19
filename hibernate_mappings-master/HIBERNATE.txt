@@ -1,0 +1,86 @@
+ORM Tools:
+--------------
+Frameworks implemented on JDBC , for back-end development.
+
+ORM Tools are Hibernate , Ibatis , Toplink etc
+
+All issues and mismatches between RDBMS and OOPS can be overcome using ORM Tools
+
+hibernate.jars
+
+
+SQL : writing query againts DB tables
+
+HQL : writing query againts Entity classes
+
+select p.name from product p;
+
+select  p.name  from EProduct p;
+
+
+-----------------------------------------------
+
+
+
+Log4J
+------
+Logging :
+It is used by developers to track their application / softwares with the help of logging messages.
+
+Types of Logs/ Log LEVELS:
+--------------
+DEBUG
+INFO
+WARN
+ERROR
+FATAL
+
+
+ALL 
+OFF
+
+Logger.LEVEL = INFO;
+
+Logger.LEVEL = ERROR
+
+
+
+logger.info("some info");
+logger.debug("some debug msg");
+logger.warn("SOME WARNINGS");
+
+
+
+------------------------------------------------
+
+Mappings:
+-------------
+
+Establishing relationship between entity classes , so that tables in DB get mapped.
+
+class Product{
+	int pid;
+	String pname;
+	List<String> colors;
+}
+
+
+<class="Product" table="Product_table">
+<property name="pname" column="product_name"/>
+
+</class>
+
+<%@ page %>
+
+<%
+
+	request.getAttribute("k");
+	session.getAttribute("k");
+
+%>
+
+
+
+
+
+

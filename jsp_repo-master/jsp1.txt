@@ -1,0 +1,156 @@
+
+JSP file
+
+
+
+hello.jsp --> jsp compiler/engine ---> hello_jsp.java(auto-generated servlet) 
+					  ---> javac/java compiler ---> hello.class -->JVM /TOMCAT
+
+
+
+
+import java.util.Date;
+
+public class  Hello_JSP  extends  HttpServlet{  // AUTO GENERATED SERVLET FOR hello.jsp
+
+
+	// jsp life cycle methods
+
+
+
+	_jspInit(){
+
+
+	}
+
+	_jspService(){
+
+		// implicit variables or objects
+
+		JspWriter  out;  // PrintWriter out;
+		HttpServletRequest request;
+		HttpServletResponse response;
+		HttpSession session;
+		ServletContext application;  // cotext
+		ServletConfig config;
+		PageContext pageCotext; // scope
+		Object page;
+
+
+		out.print("Hi Friends!");
+		out.print("<h1>Welcome to JSP</h1>");
+
+
+		out.print("int x =100;");
+
+
+	int x =100;
+	
+	out.print(x);
+
+			Date date = new Date();
+
+		out.print(" <h1>Welcome to JSP DEMO</h1> ");
+
+			out.print(list);
+
+			out.print(list)
+
+
+	}	
+
+	_jspDestroy(){
+
+	}
+
+}
+
+
+
+
+
+
+
+
+
+JSP Elements:
+==============
+1. JSP Template       // normal text or html out.print("copy")
+2. Scriplet       
+<% here any java code we can write which goes to jspSerivce();  %>
+3. JSP Declaration
+<%!  here static , instance ,create method    %>
+4. JSP Expression
+<%=  java exp %>   //out.print(copy)
+5. EL- Expression
+${}
+6. JSP Action Tags
+7. JSP Directives
+<%@taglib  %>  page , include , taglib
+8. JSTL
+
+
+
+
+In Servlet 3 scopes :   request < session < application/context
+In JSP 4 scopes    :    pageContext < request <  session < application 
+
+
+
+Note: EL-Expression check data in pageContext,request,session,application
+
+PageContext : It is used as scope variable , it also help us to get any implicit object in JSP
+
+
+
+Implicit Variables or OBJECTS:
+================================
+1. out
+2. request
+3. response
+4. session
+5. application
+6. page
+7. pageContext
+8. config
+9. exception
+
+
+
+Action tags:
+============
+
+To replace explicit java code implementation to some extend.
+
+
+
+
+Tag Libraries:
+===============
+JSTL
+
+steps:
+1. Get  jstl library (jars) 
+Download from google
+2. import jstl
+<%@ taglib    uri="path/corelib"  prefix="c"  %>
+
+3. use tags in jsp
+
+<c:out value="welcome" ></c:out>    ---> out.print("welcome")
+
+<c:catch var="e1">
+
+				---> try{
+
+				}catch(){}		
+</c:catch>  								  --->
+
+
+
+
+
+
+
+
+
